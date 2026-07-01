@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Interactive Globe</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="stage" aria-label="마우스로 돌릴 수 있는 3D 지구본">
+      <canvas id="globe"></canvas>
+
+      <section class="hud" aria-label="지구본 조작 패널">
+        <div>
+          <h1>Earth</h1>
+          <p id="status">국가 지도와 라벨을 불러오는 중입니다</p>
+        </div>
+        <button id="spinToggle" class="toggle active" type="button" aria-pressed="true">
+          자동 회전
+        </button>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/three@0.124.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.124.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
